@@ -1,0 +1,20 @@
+
+.Header-banner {
+    text-align: center;
+    padding: 5px;
+    background: #777;
+    color: white;
+    width: 102%;
+    justify-content: center;
+    display: inline-flex;
+    border-color: white;
+    margin-left: -1%;
+}
+.Header-banner h1 {
+    margin:0;
+    font-size: 100px; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px;
+}
+

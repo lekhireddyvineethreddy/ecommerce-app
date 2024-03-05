@@ -1,0 +1,27 @@
+.About-section h2{
+    font-family :'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+.About-section img{
+    float: left;
+    margin: 20px 50px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.About-section p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.About {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 22px;
+}
