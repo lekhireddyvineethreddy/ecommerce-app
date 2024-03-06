@@ -1,0 +1,50 @@
+.ContactForm {
+    max-width: 400px;
+    margin: 130px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ccc; /* Add border property */
+}
+
+.ContactForm h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ContactForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.ContactForm input[type="text"],
+.ContactForm input[type="email"],
+.ContactForm input[type="tel"],
+.ContactForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Add border property */
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.ContactForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ContactForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.ErrorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

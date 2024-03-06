@@ -16,8 +16,9 @@ const Header = ({ cartItemsCount }) => {
                 <Link to='/'>Home</Link> 
                 <Link to='/Store'>Store</Link> 
                 <Link to='/About'>About</Link>
+                <Link to = '/Contact'>Contact Us </Link>
             </div>
-            {isStorePage && <CartIcon cartItemsCount={cartItemsCount} />} {/* Render CartIcon only on Store page */}
+            {isStorePage && <CartIcon cartItemsCount={cartItemsCount} />} 
         </div>
     );
 };
