@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import './Contactus.css'; 
-import axios from 'axios'; // Import Axios for making HTTP requests
+import axios from 'axios'; 
 
 const Contactus = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const nameRef = useRef('');
+  const emailRef = useRef('');
+  const phoneRef = useRef('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Construct the data object to be sent to Firebase
-      const formData = { name, email, phone };
+      const formData = {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        phone: phoneRef.current.value
+      };
 
-      // Make a POST request to Firebase Realtime Database
       await axios.post(
         'https://ecommerce-b4248-default-rtdb.firebaseio.com/contactus.json', 
         formData
       );
 
       window.alert('Submitted successfully!');
-      setName('');
-      setEmail('');
-      setPhone('');
+      nameRef.current.value = '';
+      emailRef.current.value = '';
+      phoneRef.current.value = '';
     } catch (error) {
-      console.error('Error occurred:', error.message); // Log the error message
-      console.error('Error details:', error.response.data); // Log detailed error data if available
+      console.error('Error occurred:', error.message); 
+      console.error('Error details:', error.response.data); 
       window.alert('An error occurred while submitting the form. Please try again.');
     }
   };
@@ -39,24 +41,21 @@ const Contactus = () => {
         <input
           type="text"
           id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          ref={nameRef}
           required
         /><br/><br/>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          ref={emailRef}
           required
         /><br/><br/>
         <label htmlFor="phone">Phone:</label>
         <input
           type="tel"
           id="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          ref={phoneRef}
           required
         /><br/><br/>
         <input type="submit" value="Submit" />

@@ -29,14 +29,14 @@ const productsArr = [
   }
 ];
 
-// Changed function declaration here
+
 const StorePage = () => {
   const [cart, setCart] = useState([]);
   const [cartItemCount, setCartItemCount] = useState(0);
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    setCartItemCount(cartItemCount + 1); // Increase item count
+    setCartItemCount(cartItemCount + 1); 
   };
 
   const updateCartCount = (count) => {
